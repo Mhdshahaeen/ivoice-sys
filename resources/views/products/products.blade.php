@@ -78,10 +78,10 @@
             <div class="card mg-b-20">
                 <div class="card-header pb-0">
                     <div class="d-flex justify-content-between">
-                        @can('اضافة منتج')
+                        {{-- @can('اضافة منتج') --}}
                             <a class="modal-effect btn btn-outline-primary btn-block" data-effect="effect-scale"
                                 data-toggle="modal" href="#exampleModal">اضافة منتج</a>
-                        @endcan
+                        {{-- @endcan --}}
                     </div>
                 </div>
                 <div class="card-body">
@@ -107,19 +107,19 @@
                                         <td>{{ $Product->section->section_name }}</td>
                                         <td>{{ $Product->description }}</td>
                                         <td>
-                                            @can('تعديل منتج')
+                                            {{-- @can('تعديل منتج') --}}
                                                 <button class="btn btn-outline-success btn-sm"
                                                     data-name="{{ $Product->Product_name }}" data-pro_id="{{ $Product->id }}"
                                                     data-section_name="{{ $Product->section->section_name }}"
                                                     data-description="{{ $Product->description }}" data-toggle="modal"
                                                     data-target="#edit_Product">تعديل</button>
-                                            @endcan
+                                            {{-- @endcan --}}
 
-                                            @can('حذف منتج')
+                                            {{-- @can('حذف منتج') --}}
                                                 <button class="btn btn-outline-danger btn-sm " data-pro_id="{{ $Product->id }}"
                                                     data-product_name="{{ $Product->Product_name }}" data-toggle="modal"
                                                     data-target="#modaldemo9">حذف</button>
-                                            @endcan
+                                            {{-- @endcan --}}
 
                                         </td>
                                     </tr>
